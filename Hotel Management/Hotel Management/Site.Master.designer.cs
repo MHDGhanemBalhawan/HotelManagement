@@ -49,6 +49,15 @@ namespace Hotel_Management {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
+        /// lblCheckInDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCheckInDate;
+        
+        /// <summary>
         /// txtCheckInDate control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace Hotel_Management {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar calCheckIn;
+        
+        /// <summary>
+        /// lblCheckOutDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCheckOutDate;
         
         /// <summary>
         /// txtCheckOutDate control.

@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="Content/bootstrap-datepicker.css" rel="stylesheet" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/Site.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.1.0.min.js"></script>
@@ -19,6 +20,7 @@
     
 
     <title><%: Page.Title %>- My ASP.NET Application</title>
+
 
  
 
@@ -106,7 +108,7 @@
 
 
         </asp:ContentPlaceHolder>
-
+<%--Left Column--%>
     <div class="columnleft">
         <asp:ContentPlaceHolder ID="LeftContentPlaceHolder" runat="server">
             <div id="leftContainer">
@@ -117,25 +119,33 @@
                 <asp:UpdatePanel ID="UpdatePanel1" RenderMode="block" runat="server">
                     <ContentTemplate>
 
-                        <asp:TextBox ID="txtCheckInDate" runat="server" CssClass="alert-success">  /  /</asp:TextBox>
-                        <asp:Button ID="btnCheckIn" runat="server" OnClick="btnCheckIn_Click" CssClass="btn" />
+                        <%--Check In--%>
+                        <asp:Label ID="lblCheckInDate" runat="server" Text="Check in date" ForeColor="DarkOrange"></asp:Label>
                         <br />
-                        <asp:Panel ID="pnlCheckIn" runat="server" Width="231px" Visible="False" Height="220px">
-                            <asp:Calendar ID="calCheckIn" runat="server" OnDayRender="calCheckIn_DayRender" OnPreRender="calCheckIn_PreRender" OnSelectionChanged="calCheckIn_SelectionChanged" CssClass="btn-block">
+                        <asp:TextBox ID="txtCheckInDate" runat="server" Height="23px" Width="149px" CssClass="alert-success" Enabled="False"></asp:TextBox>
+                        <asp:Button ID="btnCheckIn" runat="server" OnClick="btnCheckIn_Click" CssClass="btn btn-primary btn-sm" Height="20px" Width="25px" />
+                        <br />
+                        <asp:Panel ID="pnlCheckIn" runat="server" Width="184px" visible="false" Height="178px">
+                            <asp:Calendar ID="calCheckIn" runat="server" OnDayRender="calCheckIn_DayRender" OnPreRender="calCheckIn_PreRender" OnSelectionChanged="calCheckIn_SelectionChanged" CssClass="datepicker" Height="150px" Width="150px">
                             </asp:Calendar>
                             <br />
                         </asp:Panel>
-                        <asp:TextBox ID="txtCheckOutDate" runat="server" CssClass="btn-info">  /  /    </asp:TextBox>
-                        <asp:Button ID="btnCheckOut" runat="server" OnClick="btnCheckOut_Click" CssClass="btn" />
-                        <asp:Panel ID="pnlCheckOut" runat="server" Width="231px" Visible="False" Height="216px">
-                            <asp:Calendar ID="calCheckOut" runat="server" OnDayRender="calCheckOut_DayRender" OnPreRender="calCheckOut_PreRender" OnSelectionChanged="calCheckOut_SelectionChanged">
-                            </asp:Calendar>
+                        <%--Check Out--%>
+                        <asp:Label ID="lblCheckOutDate" runat="server" Text="Check out date" ForeColor="DarkOrange"></asp:Label>
+                        <br />
+                        <asp:TextBox ID="txtCheckOutDate" runat="server" CssClass="alert-success" Height="23px" Width="149px" Enabled="False"></asp:TextBox>
+                        <asp:Button ID="btnCheckOut" runat="server" CssClass="btn btn-primary" OnClick="btnCheckOut_Click" Height="20px" Width="25px" />
+                        <br />
+                         <asp:Panel ID="pnlCheckOut" runat="server" Height="180px" Visible="false" Width="178px">
+                            <asp:Calendar ID="calCheckOut" runat="server" OnDayRender="calCheckOut_DayRender" OnPreRender="calCheckOut_PreRender" OnSelectionChanged="calCheckOut_SelectionChanged" CssClass="datepicker" Height="150px" Width="150px"></asp:Calendar>
                         </asp:Panel>
+
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
         </asp:ContentPlaceHolder>
     </div>
+
     <div class="column">
         <div class="mainContainer">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -143,13 +153,7 @@
         </div>
     </div>
 
-
-    <div class="clear">
-
-    </div>
-
-
-    
+    <div class="clear"></div>
 
 <div class="row">
  
