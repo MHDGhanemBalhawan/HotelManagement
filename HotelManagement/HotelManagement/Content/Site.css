@@ -1,0 +1,110 @@
+﻿ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff6a00;
+}
+
+li 
+{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) 
+{
+    background-color: #0094ff;
+}
+
+.active 
+{
+    background-color: #4CAF50;
+}
+
+.topContainer /*navbar*/ 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*flex-flow: column;
+    margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom: 5px;*/
+}
+
+
+/*html 
+{
+    background-color: gray;
+}*/
+
+.ol 
+{
+    padding-left: 40%;
+}
+
+
+#mycarousel 
+{
+    padding: 25px 25px 25px 25px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img 
+{
+    width: 100% !important;
+    height: 400px !important;
+    margin: auto !important;
+}
+
+
+.columnleft 
+{
+    float: left;
+    width: 30%;
+    border: solid 1px black;
+    margin: 2px 5px 5px 70px;
+    padding: 5px;
+    background-color: white;
+    min-height: 500px;
+}
+
+.column 
+{
+    float: left;
+    width: 58%;
+    border: solid 1px black;
+    margin: 2px 5px 5px 9px;
+    padding: 1px;
+    background-color: white;
+    min-height: 500px;
+}
+
+
+
+.clear 
+{
+    clear: both;
+}
+
+.row /*footer*/
+{
+    padding: 0px 0px 0px 0px;
+    float: none;
+    width: auto;
+}
+
+.footer 
+{
+    background-color: #ff0000;
+    width: auto;
+}
