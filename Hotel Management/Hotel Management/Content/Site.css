@@ -12,18 +12,17 @@ li
     float: left;
 }
 
-    li a 
-    {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
 li a:hover:not(.active) 
 {
-            background-color: #0094ff;
+    background-color: #0094ff;
 }
 
 .active 
@@ -31,13 +30,11 @@ li a:hover:not(.active)
     background-color: #4CAF50;
 }
 
-
-
 .topContainer /*navbar*/ 
 {
-    position:absolute;
-    top:0;
-    left:0;
+    position: absolute;
+    top: 0;
+    left: 0;
     /*flex-flow: column;
     margin-top: 50px;
     padding-top: 50px;
@@ -45,21 +42,28 @@ li a:hover:not(.active)
 }
 
 
-html 
+/*html 
 {
     background-color: gray;
+}*/
+
+.ol 
+{
+    padding-left: 40%;
 }
 
-.ol
+
+#mycarousel 
 {
-    padding-left:40%;
+    padding: 25px 25px 25px 25px;
 }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img 
 {
-    width: 100%;
-    /*margin:auto;*/
+    width: 100% !important;
+    height: 400px !important;
+    margin: auto !important;
 }
 
 
@@ -71,31 +75,18 @@ html
     margin: 2px 5px 5px 70px;
     padding: 5px;
     background-color: white;
-    min-height: 1150px;
+    min-height: 500px;
 }
 
 .column 
 {
     float: left;
-    width: 50%;
+    width: 58%;
     border: solid 1px black;
-    margin: 2px 5px 5px 10px;
+    margin: 2px 5px 5px 9px;
     padding: 1px;
     background-color: white;
-    min-height: 1150px;
-}
-
-
-.clear 
-{
-    clear: both;
-}
-
-#mycarousel 
-{
-    margin: 0px;
-    padding:0px;
-    
+    min-height: 500px;
 }
 
 
@@ -105,21 +96,7 @@ html
     clear: both;
 }
 
-#mycarousel 
-{
- 
-    padding: 25px 25px 25px 25px;
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img 
-{
-    width: 100%;
-    height: 400px;
-    margin: auto;
-}
-
-.row 
+.row /*footer*/
 {
     padding: 0px 0px 0px 0px;
     float: none;
@@ -130,26 +107,4 @@ html
 {
     background-color: #ff0000;
     width: auto;
-}
-
-#btnCheckInDate   
-{
-    border-radius:25px;
-    padding-bottom:10px;
-}
-#txtCheckInDate
-{
-    border-radius:25px;
-    padding-bottom:10px;
-}
-#btnCheckOutDate
-{
-    border-radius:25px;
-    padding-bottom:10px;
-}
-
-#txtCheckOutDate
-{
-    border-radius:25px;
-    padding-bottom:10px;
 }
