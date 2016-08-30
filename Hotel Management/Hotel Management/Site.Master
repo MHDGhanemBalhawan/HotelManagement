@@ -42,7 +42,7 @@
                         <li><a runat="server" href="~/About" class="btn btn-primary">About</a></li>
                         <li><a runat="server" href="~/Contact" class="btn btn-primary">Contact</a></li>
                         <li><a runat="server" href="#Rooms" class="btn btn-primary">Rooms</a></li>
-                        <li><a runat="server" href="#valintine" class="btn btn-primary">About Us</a></li>
+                        <li><a runat="server" href="#" class="btn btn-primary">About Us</a></li>
                    <%-- </ul>--%>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -112,34 +112,59 @@
     <div class="columnleft">
         <asp:ContentPlaceHolder ID="LeftContentPlaceHolder" runat="server">
             <div id="leftContainer">
-
-
                 <asp:ScriptManager ID="ScriptManager1" runat="server">
                 </asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel1" RenderMode="block" runat="server">
                     <ContentTemplate>
 
-                        <%--Check In--%>
-                        <asp:Label ID="lblCheckInDate" runat="server" Text="Check in date" ForeColor="DarkOrange"></asp:Label>
-                        <br />
-                        <asp:TextBox ID="txtCheckInDate" runat="server" Height="23px" Width="149px" CssClass="alert-success" Enabled="False"></asp:TextBox>
-                        <asp:Button ID="btnCheckIn" runat="server" OnClick="btnCheckIn_Click" CssClass="btn btn-primary btn-sm" Height="20px" Width="25px" />
-                        <br />
-                        <asp:Panel ID="pnlCheckIn" runat="server" Width="184px" visible="false" Height="178px">
-                            <asp:Calendar ID="calCheckIn" runat="server" OnDayRender="calCheckIn_DayRender" OnPreRender="calCheckIn_PreRender" OnSelectionChanged="calCheckIn_SelectionChanged" CssClass="datepicker" Height="150px" Width="150px">
-                            </asp:Calendar>
+<asp:table runat="server">
+    <asp:TableRow>
+        <asp:TableCell  VerticalAlign="Top">
+                                    <asp:Panel ID="pnlCheckInContainer" runat="server" Width="186px">
+                            <asp:Label ID="lblCheckInDate" runat="server" Text="Check in date" ForeColor="DarkOrange"></asp:Label>
                             <br />
-                        </asp:Panel>
-                        <%--Check Out--%>
-                        <asp:Label ID="lblCheckOutDate" runat="server" Text="Check out date" ForeColor="DarkOrange"></asp:Label>
-                        <br />
-                        <asp:TextBox ID="txtCheckOutDate" runat="server" CssClass="alert-success" Height="23px" Width="149px" Enabled="False"></asp:TextBox>
-                        <asp:Button ID="btnCheckOut" runat="server" CssClass="btn btn-primary" OnClick="btnCheckOut_Click" Height="20px" Width="25px" />
-                        <br />
-                         <asp:Panel ID="pnlCheckOut" runat="server" Height="180px" Visible="false" Width="178px">
-                            <asp:Calendar ID="calCheckOut" runat="server" OnDayRender="calCheckOut_DayRender" OnPreRender="calCheckOut_PreRender" OnSelectionChanged="calCheckOut_SelectionChanged" CssClass="datepicker" Height="150px" Width="150px"></asp:Calendar>
+                            <asp:TextBox ID="txtCheckInDate" runat="server" Height="23px" Width="149px" CssClass="alert-success" BorderStyle="Outset" Enabled="False"></asp:TextBox>
+                            <asp:Button ID="btnCheckInDate" runat="server" OnClick="btnCheckIn_Click" CssClass="btn btn-primary btn-sm" BorderStyle="Ridge" Height="20px" Width="25px" />
+                            <asp:Panel ID="pnlCheckIn" runat="server" Width="184px" Visible="false" Height="178px">
+                                <asp:Calendar ID="calCheckIn" runat="server" OnDayRender="calCheckIn_DayRender" OnPreRender="calCheckIn_PreRender" OnSelectionChanged="calCheckIn_SelectionChanged" CssClass="datepicker" NextPrevStyle-CssClass="alert-success" Height="150px" Width="150px"></asp:Calendar>
+                                <br />
+                            </asp:Panel>
                         </asp:Panel>
 
+
+
+
+        </asp:TableCell>
+        <asp:TableCell VerticalAlign="Top">
+
+                                    <asp:Panel ID="pnlCheckOutContainer" runat="server" Width="185px">
+                            <asp:Label ID="lblCheckOutDate" runat="server" ForeColor="DarkOrange" Style="text-align: left" Text="Check out date"></asp:Label>
+                            <br />
+                            <asp:TextBox ID="txtCheckOutDate" runat="server" CssClass="alert-success" Enabled="False" Height="23px" Width="149px"></asp:TextBox>
+                            <asp:Button ID="btnCheckOutDate" runat="server" CssClass="btn btn-primary" Height="20px" OnClick="btnCheckOut_Click" Width="25px" />
+                            <br />
+                            <asp:Panel ID="pnlCheckOut" runat="server" Height="180px" Visible="false" Width="185px">
+                                <asp:Calendar ID="calCheckOut" runat="server" CssClass="datepicker" Height="150px" OnDayRender="calCheckOut_DayRender" OnPreRender="calCheckOut_PreRender" OnSelectionChanged="calCheckOut_SelectionChanged" Width="150px"></asp:Calendar>
+                            </asp:Panel>
+                        </asp:Panel>
+
+
+
+
+        </asp:TableCell>
+
+
+
+
+    </asp:TableRow>
+   
+
+                 
+
+           
+
+
+    </asp:table>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>

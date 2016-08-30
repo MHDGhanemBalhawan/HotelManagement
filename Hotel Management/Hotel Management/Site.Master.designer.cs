@@ -49,6 +49,15 @@ namespace Hotel_Management {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
+        /// pnlCheckInContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCheckInContainer;
+        
+        /// <summary>
         /// lblCheckInDate control.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,13 @@ namespace Hotel_Management {
         protected global::System.Web.UI.WebControls.TextBox txtCheckInDate;
         
         /// <summary>
-        /// btnCheckIn control.
+        /// btnCheckInDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckIn;
+        protected global::System.Web.UI.WebControls.Button btnCheckInDate;
         
         /// <summary>
         /// pnlCheckIn control.
@@ -94,6 +103,15 @@ namespace Hotel_Management {
         protected global::System.Web.UI.WebControls.Calendar calCheckIn;
         
         /// <summary>
+        /// pnlCheckOutContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlCheckOutContainer;
+        
+        /// <summary>
         /// lblCheckOutDate control.
         /// </summary>
         /// <remarks>
@@ -112,13 +130,13 @@ namespace Hotel_Management {
         protected global::System.Web.UI.WebControls.TextBox txtCheckOutDate;
         
         /// <summary>
-        /// btnCheckOut control.
+        /// btnCheckOutDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCheckOut;
+        protected global::System.Web.UI.WebControls.Button btnCheckOutDate;
         
         /// <summary>
         /// pnlCheckOut control.
